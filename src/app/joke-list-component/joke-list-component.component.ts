@@ -4,7 +4,8 @@ import {Joke} from '../joke';
 @Component({
   selector: 'app-joke-list-component',
   templateUrl: './joke-list-component.component.html',
-  styleUrls: ['./joke-list-component.component.css']
+  styleUrls: ['./joke-list-component.component.css'],
+
 })
 export class JokeListComponentComponent implements OnInit {
 
@@ -17,6 +18,9 @@ export class JokeListComponentComponent implements OnInit {
     ];
   }
 
+  addJoke(joke) {
+    this.jokes.unshift(joke);
+  }
 
 
   ngOnInit() {

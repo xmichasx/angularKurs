@@ -9,6 +9,9 @@ import {Joke} from '../joke';
 export class JokeFormComponentComponent implements OnInit {
 
   @Output() jokeCreated = new EventEmitter<Joke>();
+  createJoke(setup: string, punchline: string) {
+    this.jokeCreated.emit(new Joke(setup, punchline));
+  }
 
   constructor() { }
 
